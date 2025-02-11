@@ -8,21 +8,10 @@ import 'element-plus/dist/index.css'
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app'
-import { getAnalytics } from 'firebase/analytics'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: 'AIzaSyDUP3F9eyfmSf_sueYOeDW17y7QP1VoT9I',
-//   authDomain: 'inndia-admin.firebaseapp.com',
-//   projectId: 'inndia-admin',
-//   storageBucket: 'inndia-admin.firebasestorage.app',
-//   messagingSenderId: '199534529356',
-//   appId: '1:199534529356:web:eaa0c0d2055067640edde9',
-//   measurementId: 'G-G65E4KXX76',
-// }
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
