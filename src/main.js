@@ -14,14 +14,24 @@ import { getAnalytics } from 'firebase/analytics'
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: 'AIzaSyDUP3F9eyfmSf_sueYOeDW17y7QP1VoT9I',
+//   authDomain: 'inndia-admin.firebaseapp.com',
+//   projectId: 'inndia-admin',
+//   storageBucket: 'inndia-admin.firebasestorage.app',
+//   messagingSenderId: '199534529356',
+//   appId: '1:199534529356:web:eaa0c0d2055067640edde9',
+//   measurementId: 'G-G65E4KXX76',
+// }
+
 const firebaseConfig = {
-  apiKey: 'AIzaSyDUP3F9eyfmSf_sueYOeDW17y7QP1VoT9I',
-  authDomain: 'inndia-admin.firebaseapp.com',
-  projectId: 'inndia-admin',
-  storageBucket: 'inndia-admin.firebasestorage.app',
-  messagingSenderId: '199534529356',
-  appId: '1:199534529356:web:eaa0c0d2055067640edde9',
-  measurementId: 'G-G65E4KXX76',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 }
 
 // Initialize Firebase
