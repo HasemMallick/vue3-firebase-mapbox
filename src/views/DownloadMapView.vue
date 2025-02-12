@@ -1,5 +1,5 @@
 <template>
-  <!-- <p>
+  <p>
     <el-checkbox
       label="Add India State Boundary"
       v-model="indiaStateBoundary"
@@ -7,7 +7,7 @@
     />
   </p>
 
-  <div>
+  <!-- <div>
     <div>
       <el-select v-model="selectedState" placeholder="Select" size="large" style="width: 240px">
         <el-option v-for="item in statesName" :key="item" :label="item" :value="item" />
@@ -35,7 +35,7 @@ const statesName = ['SIKKIIM', 'MANIPUR', 'KERALA', 'WEST BENGAL']
 const isLayerLoading = ref(false)
 
 // Access the environment variable
-const mbAccessToken = import.meta.env.VITE_MAPBOX_API_KEY;
+const mbAccessToken = import.meta.env.VITE_MAPBOX_API_KEY
 
 // Get selected state and filter layer
 const getSelectedState = () => {
@@ -78,7 +78,7 @@ const getSelectedState = () => {
 
 const addIndiaStateBoundary = () => {
   if (!indiaStateBoundary.value) {
-    ElMessage.info('adding state')
+    ElMessage.info('Zoom In to see the Layer')
 
     // Add source from your tileset
     map.value.addSource('india_states-1p7tlu', {
@@ -123,5 +123,9 @@ onMounted(() => {
   margin-left: 25%;
   height: 400px;
   width: 500px;
+}
+
+p {
+  margin-left: 25%;
 }
 </style>

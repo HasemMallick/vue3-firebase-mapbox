@@ -1,7 +1,7 @@
 <template>
   <div class="reg-wrapper">
     <div>
-      <h2>Register</h2>
+      <h2>Sign Up</h2>
     </div>
 
     <div class="input-btn-wrapper">
@@ -13,7 +13,9 @@
       </p>
       <div class="btn-wrapper">
         <p><el-button type="primary" @click="register">Sign UP</el-button></p>
-        <p><el-button plain type="warning" @click="signInWithGoogle">Sign in with Google</el-button></p>
+        <p>
+          <el-button plain type="warning" @click="signInWithGoogle">Sign-up with Google</el-button>
+        </p>
       </div>
     </div>
   </div>
@@ -75,7 +77,7 @@ const signInWithGoogle = () => {
   gap: 119px;
 }
 
-.input-btn-wrapper>p {
+.input-btn-wrapper > p {
   padding-top: 2rem;
 }
 </style>

@@ -6,6 +6,12 @@ import { createPinia } from 'pinia'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
+// gesture plugin
+import { GesturePlugin } from '@vueuse/gesture'
+
+// motion plugin
+import { MotionPlugin } from '@vueuse/motion'
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app'
 // TODO: Add SDKs for Firebase products that you want to use
@@ -35,5 +41,7 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 app.use(ElementPlus)
+app.use(GesturePlugin)
+app.use(MotionPlugin)
 
 app.mount('#app')

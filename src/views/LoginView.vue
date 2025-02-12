@@ -21,7 +21,8 @@
 
       <div class="btn-wrapper">
         <p><el-button type="primary" @click="login">Sign In</el-button></p>
-        <p><el-button type="warning" plain @click="signInWithGoogle">Sign in with Google</el-button>
+        <p>
+          <el-button type="warning" plain @click="signInWithGoogle">Sign in with Google</el-button>
         </p>
       </div>
     </div>
@@ -97,9 +98,7 @@ const signInWithGoogle = () => {
   margin: 2rem 25%;
 }
 
-
-
-div>div>a>h4 {
+div > div > a > h4 {
   color: green;
   padding: 1rem 0;
 }
@@ -110,7 +109,7 @@ div>div>a>h4 {
   gap: 119px;
 }
 
-.input-btn-wrapper>p {
+.input-btn-wrapper > p {
   padding-top: 2rem;
 }
 </style>

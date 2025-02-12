@@ -2,14 +2,19 @@
   <header>
     <nav>
       <RouterLink to="/">Home</RouterLink>
-      <!-- <RouterLink to="/about">About</RouterLink> -->
+      <RouterLink to="/about">About</RouterLink>
       <RouterLink to="/login">Login</RouterLink>
       <RouterLink to="/registration">Registration</RouterLink>
       <RouterLink to="/download-map">Download Data</RouterLink>
       <RouterLink @click="handlerSignOut" v-if="isLoggedIn" to="/">Sign Out</RouterLink>
     </nav>
   </header>
-  <RouterView></RouterView>
+  <RouterView v-slot="{ Component }">
+    <!-- Use a custom transition or fallback to `fade` -->
+    <transition name="fade" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </RouterView>
 </template>
 
 <script setup>
@@ -45,6 +50,16 @@ const handlerSignOut = () => {
 <style scoped>
 header {
   margin: 2rem 25%;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
 }
 
 /* nav {
