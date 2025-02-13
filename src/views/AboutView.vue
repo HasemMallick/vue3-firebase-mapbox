@@ -7,7 +7,6 @@ import { useSound } from '@vueuse/sound'
 import sClicked from '../assets/mouse-click-sound-233951.mp3'
 import sChecked from '../assets/pencil_check_mark_1-88805.mp3'
 
-
 const { play } = useSound(sClicked)
 const { checked } = useSound(sChecked)
 
@@ -15,7 +14,7 @@ const checkBoxHandler = () => {
   if (checkBox.value) {
     return checked
   } else {
-    console.log("No sound");
+    console.log('No sound')
   }
 }
 
@@ -76,14 +75,21 @@ console.log('State: ', pending)
     <h1>{{ word }}</h1>
     <h1>About Page</h1>
 
-
     <div>
       <h3>Try Sound effect on check</h3>
       <label for="checkbox">Check it</label>
-      <input type="checkbox" name="checkbox" id="checkbox" v-model="checkBox" @click="checkBoxHandler">
+      <input
+        type="checkbox"
+        name="checkbox"
+        id="checkbox"
+        v-model="checkBox"
+        @click="checkBoxHandler"
+      />
 
       <button @click="play">Play a sound</button>
-      <p>checkbox state: <span>{{ checkBox }}</span></p>
+      <p>
+        checkbox state: <span>{{ checkBox }}</span>
+      </p>
     </div>
     <div>
       <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, incidunt accusamus.</h2>
@@ -133,11 +139,11 @@ console.log('State: ', pending)
   align-items: center;
 }
 
-div>div>h1 {
+div > div > h1 {
   padding: 2rem 0;
 }
 
-div>div>p {
+div > div > p {
   padding: 2rem 0;
 }
 </style>

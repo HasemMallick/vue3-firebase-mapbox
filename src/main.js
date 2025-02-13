@@ -12,6 +12,9 @@ import { GesturePlugin } from '@vueuse/gesture'
 // motion plugin
 import { MotionPlugin } from '@vueuse/motion'
 
+// list animation plugin
+import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app'
 // TODO: Add SDKs for Firebase products that you want to use
@@ -43,5 +46,6 @@ app.use(router)
 app.use(ElementPlus)
 app.use(GesturePlugin)
 app.use(MotionPlugin)
+app.use(autoAnimatePlugin)
 
 app.mount('#app')

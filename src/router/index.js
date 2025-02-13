@@ -6,6 +6,7 @@ import LoginView from '../views/LoginView.vue'
 import RegistrationView from '../views/RegistrationView.vue'
 import DownloadMapView from '../views/DownloadMapView.vue'
 import AboutView from '../views/AboutView.vue'
+import VueAnimationView from '../views/VueAnimationView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,6 +38,11 @@ const router = createRouter({
       name: 'registration',
       component: RegistrationView,
       // component: () => import('../views/RegistrationView.vue'),
+    },
+    {
+      path: '/vue-animation',
+      name: 'vueAnimation',
+      component: VueAnimationView,
     },
     {
       path: '/download-map',
